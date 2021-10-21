@@ -6,9 +6,9 @@ module.exports = {
   },
   extends: [
     'eslint:recommended',
-    'plugin:@typescript-eslint/recommended',
     'plugin:react/recommended',
-    'plugin:react-hooks/recommended',
+    'plugin:@typescript-eslint/recommended',
+    'next',
     'plugin:prettier/recommended',
   ],
   parser: '@typescript-eslint/parser',
@@ -16,17 +16,11 @@ module.exports = {
     ecmaFeatures: {
       jsx: true,
     },
-    ecmaVersion: 12,
+    ecmaVersion: 13,
     sourceType: 'module',
   },
   plugins: ['react', '@typescript-eslint'],
-  settings: {
-    react: {
-      version: 'detect',
-    },
-  },
   rules: {
-    '@typescript-eslint/explicit-module-boundary-types': 'off',
     'react/react-in-jsx-scope': 'off',
   },
 };
